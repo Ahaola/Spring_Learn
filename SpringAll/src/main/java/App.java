@@ -21,12 +21,21 @@ public class App {
 //        userConfiguration.sayHi();
 
 
-        ApplicationContext context= new ClassPathXmlApplicationContext("spring-config.xml");
-        UserComponent userComponent = context.getBean(UserComponent.class);
-        userComponent.sayHi();
+//        ApplicationContext context= new ClassPathXmlApplicationContext("spring-config.xml");
+//        UserComponent userComponent = context.getBean(UserComponent.class);
+//        userComponent.sayHi();
 
 //      User user = context.getBean("user1", User.class);
+//        ApplicationContext context= new ClassPathXmlApplicationContext("spring-config.xml");
 //        User user = context.getBean(User.class);//只使用类属性
 //        System.out.println(user);
+
+//        ApplicationContext context= new ClassPathXmlApplicationContext("spring-config.xml");
+//        User user = context.getBean("user1",User.class);//只使用类属性
+//        System.out.println(user);
+
+        ApplicationContext context= new ClassPathXmlApplicationContext("spring-config.xml");
+        UserController4 userController4 = context.getBean(UserController4.class);
+        userController4.sayHi();
     }
 }
