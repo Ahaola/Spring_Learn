@@ -1,0 +1,14 @@
+#这是生产环境的端口号
+server:
+  port: 1234
+
+logging:
+  file:
+#    path: D:\Spirng框架\Spirng_GO\Spring_Learn\springboot项目\logs
+    name: D:\Spirng框架\Spirng_GO\Spring_Learn\springboot项目\logs\springboot-1.logs
+  level:
+    root: error
+    com:
+      example:
+        demo:
+          controller: trace

@@ -48,14 +48,14 @@ public class TestController {
     }
 
 
-//    @RequestMapping("/hello")//url路由注册
-//    public String sayHi(String name){
-//
-//        if(!StringUtils.hasLength(name)){
-//            name = "SpringBoot";
-//        }
-//        return "hello"+ name;
-//    }
+    @RequestMapping("/hello")//url路由注册
+    public String sayHi(String name){
+
+        if(!StringUtils.hasLength(name)){
+            name = "SpringBoot";
+        }
+        return "hello"+ name;
+    }
 
 //    @RequestMapping("/getconf")
 //    public String getconf(){

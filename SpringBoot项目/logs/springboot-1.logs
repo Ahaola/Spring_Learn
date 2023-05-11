@@ -1,0 +1,21 @@
+2023-05-11 14:38:31.880 TRACE 18140 --- [http-nio-1234-exec-1] c.e.demo.controller.UserController       : 我是 trace
+2023-05-11 14:38:31.886 DEBUG 18140 --- [http-nio-1234-exec-1] c.e.demo.controller.UserController       : 我是 debug
+2023-05-11 14:38:31.896  INFO 18140 --- [http-nio-1234-exec-1] c.e.demo.controller.UserController       : 我是 info
+2023-05-11 14:38:31.897  WARN 18140 --- [http-nio-1234-exec-1] c.e.demo.controller.UserController       : 我是 warn
+2023-05-11 14:38:31.897 ERROR 18140 --- [http-nio-1234-exec-1] c.e.demo.controller.UserController       : 我是 error
+2023-05-11 14:48:31.482 TRACE 16412 --- [http-nio-1234-exec-1] c.e.demo.controller.ArticleController    : 我是 slf4j 的 trace
+2023-05-11 14:48:31.484 DEBUG 16412 --- [http-nio-1234-exec-1] c.e.demo.controller.ArticleController    : 我是 slf4j 的 debug
+2023-05-11 14:48:31.484  INFO 16412 --- [http-nio-1234-exec-1] c.e.demo.controller.ArticleController    : 我是 slf4j 的 info
+2023-05-11 14:48:31.484 ERROR 16412 --- [http-nio-1234-exec-1] c.e.demo.controller.ArticleController    : 我是 slf4j 的 error
+2023-05-11 14:48:33.879 TRACE 16412 --- [http-nio-1234-exec-2] c.e.demo.controller.ArticleController    : 我是 slf4j 的 trace
+2023-05-11 14:48:33.880 DEBUG 16412 --- [http-nio-1234-exec-2] c.e.demo.controller.ArticleController    : 我是 slf4j 的 debug
+2023-05-11 14:48:33.880  INFO 16412 --- [http-nio-1234-exec-2] c.e.demo.controller.ArticleController    : 我是 slf4j 的 info
+2023-05-11 14:48:33.880 ERROR 16412 --- [http-nio-1234-exec-2] c.e.demo.controller.ArticleController    : 我是 slf4j 的 error
+2023-05-11 14:48:34.396 TRACE 16412 --- [http-nio-1234-exec-3] c.e.demo.controller.ArticleController    : 我是 slf4j 的 trace
+2023-05-11 14:48:34.397 DEBUG 16412 --- [http-nio-1234-exec-3] c.e.demo.controller.ArticleController    : 我是 slf4j 的 debug
+2023-05-11 14:48:34.397  INFO 16412 --- [http-nio-1234-exec-3] c.e.demo.controller.ArticleController    : 我是 slf4j 的 info
+2023-05-11 14:48:34.398 ERROR 16412 --- [http-nio-1234-exec-3] c.e.demo.controller.ArticleController    : 我是 slf4j 的 error
+2023-05-11 14:49:24.250 TRACE 28436 --- [http-nio-1234-exec-1] c.e.demo.controller.ArticleController    : 我是 slf4j 的 trace
+2023-05-11 14:49:24.252 DEBUG 28436 --- [http-nio-1234-exec-1] c.e.demo.controller.ArticleController    : 我是 slf4j 的 debug
+2023-05-11 14:49:24.253  INFO 28436 --- [http-nio-1234-exec-1] c.e.demo.controller.ArticleController    : 我是 slf4j 的 info
+2023-05-11 14:49:24.254 ERROR 28436 --- [http-nio-1234-exec-1] c.e.demo.controller.ArticleController    : 我是 slf4j 的 error
