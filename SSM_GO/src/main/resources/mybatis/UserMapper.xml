@@ -2,6 +2,83 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.mapper.UserMapper">
 
+    <delete id="dels">
+        delete from student where id in
+        <foreach collection="ids" open="(" close=")" item="id" separator=",">
+            #{id}
+        </foreach>
+    </delete>
+
+    <update id="update2">
+        update student
+        <set>
+            <if test="name!=null">
+                name=#{name},
+            </if>
+            <if test="qq_mail!=null">
+                qq_mail=#{qq_mail}
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <select id="wheredemo" resultType="com.example.demo.entity.UserBlog">
+        select * from student
+        <where>
+            <if test="name!=null">
+                name=#{name}
+            </if>
+            <if test="qq_mail!=null">
+                and qq_mail=#{qq_mail}
+            </if>
+        </where>
+    </select>
+
+    <insert id="add3">
+        insert into student
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id!=null">
+                id,
+            </if>
+            <if test="sn!=null">
+                sn,
+            </if>
+            <if test="name!=null">
+                name,
+            </if>
+            <if test="name!=null">
+                qq_mail
+            </if>
+        </trim>
+        values
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="name!=null">
+                #{id},
+            </if>
+            <if test="name!=null">
+                #{sn},
+            </if>
+            <if test="name!=null">
+                #{name},
+            </if>
+            <if test="name!=null">
+                #{qq_mail}
+            </if>
+        </trim>
+    </insert>
+
+    <insert id="add2">
+        insert into student(id,sn,
+        <if test="name!=null">
+            name,
+        </if>
+        qq_mail)values (#{id},
+        <if test="sn!=null">
+            #{sn},
+        </if>
+        #{name},#{qq_mail})
+    </insert>
+
     <delete id="delid">
         delete from student where id = #{id}
     </delete>

@@ -8,6 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.LinkedList;
+import java.util.List;
+
+import static org.apache.tomcat.websocket.WsSession.ids;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest //1、表示当前单元测试是运行在Spring boot环境中
@@ -82,4 +86,51 @@ class UserMapperTest {
         //断言看是否是一行数据受到了影响
         Assertions.assertEquals(1,res);
     }
+
+    @Test
+    void add2() {
+        UserBlog userBlog = new UserBlog();
+        userBlog.setId(12);
+        userBlog.setSn(601);
+        userBlog.setName("哈哈哈");
+        userBlog.setQq_mail("12345@qq.com");
+        int result = userMapper.add2(userBlog);
+        System.out.println(result);
+    }
+
+    @Test
+    void add3() {
+        UserBlog userBlog = new UserBlog();
+        userBlog.setId(13);
+        userBlog.setSn(701);
+        userBlog.setName("xiaoxiao");
+        userBlog.setQq_mail("67890@qq.com");
+        int result = userMapper.add3(userBlog);
+        System.out.println("添加:"+result);
+    }
+
+    @Test
+    void wheredemo() {
+        List<UserBlog> list = userMapper.wheredemo("baga",null);
+        System.out.println(list);
+    }
+
+    @Test
+    void update2() {
+        UserBlog userBlog = new UserBlog();
+        userBlog.setId(8);
+        userBlog.setName("apple");
+        userBlog.setQq_mail("1221@qq.com");
+        int result = userMapper.add3(userBlog);
+        System.out.println("添加:"+result);
+    }
+
+//    @Test
+//    void dels() {
+//        List<Integer> list = new LinkedList<>();
+//        list.add(20);
+//        list.add(21);
+//        int result = userMapper.dels(ids);
+//        System.out.println("删除:"+result);
+//    }
 }

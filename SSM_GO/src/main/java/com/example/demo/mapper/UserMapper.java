@@ -4,6 +4,8 @@ import com.example.demo.entity.UserBlog;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 @Mapper
 public interface UserMapper {
 
@@ -41,5 +43,36 @@ public interface UserMapper {
      * @return
      */
     int delid(@Param("id")Integer id);
+
+    /**
+     * if标签
+     * @param userBlog
+     * @return
+     */
+    int add2(UserBlog userBlog);
+
+    /**
+     * trim标签
+     * @param userBlog
+     * @return
+     */
+    int add3(UserBlog userBlog);
+
+    /**
+     *  where 标签的使用
+     * @param name
+     * @param qq_mail
+     * @return
+     */
+    List<UserBlog> wheredemo(String name,String qq_mail);
+
+    /**
+     * set标签
+     * @param userBlog
+     * @return
+     */
+    int update2(UserBlog userBlog);
+
+    int dels(List<Integer> ids);
 
 }
