@@ -2,13 +2,16 @@
 server:
   port: 1234
 
+#设置日志级别
+  level:
+    root:
+      com:
+        example:
+          demo:
+            controller: error
+
+#设置日志文件的保存路径
 logging:
   file:
-#    path: D:\Spirng框架\Spirng_GO\Spring_Learn\springboot项目\logs
+    path: D:\Spirng框架\Spirng_GO\Spring_Learn\springboot项目\logs
     name: D:\Spirng框架\Spirng_GO\Spring_Learn\springboot项目\logs\springboot-1.logs
-  level:
-    root: error
-    com:
-      example:
-        demo:
-          controller: trace

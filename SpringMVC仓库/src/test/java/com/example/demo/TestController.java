@@ -39,6 +39,7 @@ public class TestController {
     public String ShowUser(User user){
         return user.toString();
     }
+    //重命名前端传过来的参数@RequestParam
     @GetMapping("/show-time")
     public String showtime(@RequestParam(value = "t1",required = false) String starttime,
                            @RequestParam(value = "t2",required = false) String endtime){
@@ -51,12 +52,14 @@ public class TestController {
         return user.toString();
     }
 
+    //获取URL中的参数@PathVariable
     @RequestMapping("/login/{username}/{password}")
     public String login(@PathVariable("username")String username,
                         @PathVariable("password")String password){
         return username + ":"+password;
     }
 
+    //上传文件@RequestPart
     @RequestMapping("/upfile")
     public String upfile(@RequestPart("myfile") MultipartFile file) throws IOException {
         String path = "D:\\Spirng框架\\Spirng_GO\\Spring_Learn\\SpringMVC仓库\\Pictures\\img.png";

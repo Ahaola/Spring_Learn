@@ -4,6 +4,7 @@ server:
 #mytest1: 小黑
 
  #配置数据库连接
+#yml的语法格式 key: value  注意中间是冒号+空格
 spring:
   profiles:
     active: prod
@@ -27,5 +28,5 @@ spring:
 #  id: 1
 #  name: zhangsan
 #  age: 18
-
-student: {id: 1,name: zhangsan,age: 20}
+#
+#student: {id: 1,name: zhangsan,age: 20}
