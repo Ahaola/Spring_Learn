@@ -6,4 +6,8 @@
         select articleinfo.*,userinfo.username from articleinfo left join userinfo on
         userinfo.id = articleinfo.uid where articleinfo.id = #{id}
     </select>
+    <select id="getlistbyuid" resultType="com.example.entity.vo.ArticleInfoVO">
+        select articleinfo.*,userinfo.username from articleinfo left join userinfo on
+            userinfo.id = articleinfo.uid where articleinfo.uid = #{uid}
+    </select>
 </mapper>
