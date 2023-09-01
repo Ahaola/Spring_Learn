@@ -30,4 +30,5 @@ class ArticleMapperTest {
         //parallel()方法是并发打印，打印出来的结果是无序的
         list.stream().parallel().forEach(System.out::println);
     }
+
 }
