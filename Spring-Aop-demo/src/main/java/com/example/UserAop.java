@@ -10,6 +10,8 @@ import java.time.LocalDateTime;
 @Component // 不能省略
 public class UserAop {
     //切点，用来写拦截规则
+    // execution() 是最常⽤的切点函数，⽤来匹配⽅法，语法为：
+    //execution(<修饰符><返回类型><包.类.⽅法(参数)><异常>)
     @Pointcut("execution(public * com.example.controller.UserController.*(..))")
     public void pointcut(){
     }
